@@ -102,7 +102,7 @@ class CustomDataset(Dataset):
         return self.length[idx], self.seq_embedding[idx], self.seq_coin_embedding[idx], self.labels[idx]
 # LSTM
 class LSTM(nn.Module):
-    def __init__(self, input_dim, hidden_dim=1, num_layers=1):
+    def __init__(self, input_dim, hidden_dim=16, num_layers=16):
         super(LSTM, self).__init__()
         self.input_dim = input_dim
         self.hidden_dim = hidden_dim

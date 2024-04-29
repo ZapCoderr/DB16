@@ -108,8 +108,8 @@ class DNN(nn.Module):
         self.input_dim = input_dim
         self.embedding_dim = 1 
         self.fc1 = nn.Linear(input_dim, self.embedding_dim)
-        self.fc2 = nn.Linear(self.embedding_dim, 32)
-        self.output = nn.Linear(32, 1)
+        self.fc2 = nn.Linear(self.embedding_dim, 2)
+        self.output = nn.Linear(2, 1)
 
     def forward(self, x):
         x = torch.relu(self.fc1(x))

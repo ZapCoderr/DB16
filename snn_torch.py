@@ -106,7 +106,7 @@ class SNN(nn.Module):
     def __init__(self, input_dim):
         super(SNN, self).__init__()
         self.input_dim = input_dim
-        self.embedding_dim = 16 
+        self.embedding_dim = 40 
         self.fc1 = nn.Linear(input_dim, self.embedding_dim)
         self.attention = nn.Parameter(torch.ones(self.embedding_dim, dtype=torch.float32))
         self.fc2 = nn.Linear(self.embedding_dim, 32)
